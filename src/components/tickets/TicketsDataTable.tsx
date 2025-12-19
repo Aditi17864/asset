@@ -122,9 +122,9 @@ export function TicketsDataTable({ tickets }: TicketsDataTableProps) {
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
                         <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                        <Link href={`/tickets/${ticket.id}`} passHref>
-                          <DropdownMenuItem asChild><a>View Details</a></DropdownMenuItem>
-                        </Link>
+                        <DropdownMenuItem asChild>
+                           <Link href={`/tickets/${ticket.id}`}>View Details</Link>
+                        </DropdownMenuItem>
                         <DropdownMenuItem>Edit Ticket</DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>

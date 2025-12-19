@@ -11,6 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { MoreHorizontal, Search } from "lucide-react";
 import { Asset, AssetStatus } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { Card } from "@/components/ui/card";
 
 interface AssetsDataTableProps {
   assets: Asset[];
@@ -107,9 +108,9 @@ export function AssetsDataTable({ assets }: AssetsDataTableProps) {
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">
                         <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                        <Link href={`/assets/${asset.id}`} passHref>
-                          <DropdownMenuItem asChild><a>View Details</a></DropdownMenuItem>
-                        </Link>
+                        <DropdownMenuItem asChild>
+                          <Link href={`/assets/${asset.id}`}>View Details</Link>
+                        </DropdownMenuItem>
                         <DropdownMenuItem>Edit Asset</DropdownMenuItem>
                         <DropdownMenuItem className="text-destructive">Delete Asset</DropdownMenuItem>
                       </DropdownMenuContent>
@@ -130,6 +131,3 @@ export function AssetsDataTable({ assets }: AssetsDataTableProps) {
     </div>
   );
 }
-
-// Add Card to imports
-import { Card } from "@/components/ui/card";
