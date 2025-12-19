@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -54,7 +55,7 @@ export function SidebarNav() {
             const isActive = item.href === "/" ? pathname === item.href : pathname.startsWith(item.href);
             return (
               <SidebarMenuItem key={item.label}>
-                <Link href={item.href} legacyBehavior passHref>
+                <Link href={item.href}>
                   <SidebarMenuButton isActive={isActive} tooltip={item.label}>
                     <item.icon />
                     <span>{item.label}</span>
