@@ -12,7 +12,7 @@ export function CreateAssetDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>
+        <Button className="bg-yellow-500 hover:bg-yellow-600 text-black">
           <PlusCircle className="mr-2 h-4 w-4" /> Create Asset
         </Button>
       </DialogTrigger>
